@@ -13,7 +13,12 @@
         <p class="card-text">
           <strong>Published:</strong> {{ video.publishedAt | date }}
         </p>
-        <button class="btn btn-outline-primary btn-block">View Video</button>
+        <button
+          class="btn btn-outline-primary btn-block"
+          (click)="showVideo(video)"
+        >
+          View Video
+        </button>
       </div>
     </div>
   </div>
