@@ -1,9 +1,9 @@
-<h1 class="mt-4">YouTube Videos</h1>
+<h1 class="mt-4 animate__animated animate__fadeIn">YouTube Videos</h1>
 <hr />
 
 <div class="card-columns row row-cols-1 row-cols-md-3 g-4">
   <div class="col" *ngFor="let video of videos">
-    <div class="card">
+    <div class="card animate__animated animate__fadeIn">
       <img [src]="video.thumbnails.high.url" class="cart-img-top" alt="..." />
       <div class="card-body text-center">
         <h5 class="card-title">{{ video.title }}</h5>
@@ -26,6 +26,8 @@
 
 <div class="row mt-5 mb-5 text-center">
   <div class="col">
-    <button class="btn btn-primary btn-lg">Next page</button>
+    <button class="btn btn-primary btn-lg" (click)="loadVideos()">
+      Next page
+    </button>
   </div>
 </div>
